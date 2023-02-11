@@ -21,10 +21,10 @@ class Content {
   }
 
   Content({
-    String username = "",
-    String name = "",
-    String avatar = "",
-    String image = "",
+    required String username,
+    required String name,
+    required String avatar,
+    required String image,
   })  : _username = username,
         _name = name,
         _avatar = avatar,

@@ -24,10 +24,10 @@ class User {
   }
 
   User({
-    String username = "",
-    String pass = "",
-    String name = "",
-    String avatar = "",
+    required String username,
+    required String pass,
+    required String name,
+    String avatar = "assets/icons/avatar.png",
   })  : _username = username,
         _pass = pass,
         _name = name,

@@ -12,7 +12,7 @@ class ContentScreen extends StatelessWidget {
         builder: (context, content, _) {
           return Stack(
             children: [
-              Image.asset(content.image,
+              Image.asset(content.ct.image,
                   fit: BoxFit.fill,
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width),
@@ -23,18 +23,18 @@ class ContentScreen extends StatelessWidget {
                   children: [
                     CircleAvatar(
                         radius: 15,
-                        backgroundImage: AssetImage(content.avatar)),
+                        backgroundImage: AssetImage(content.ct.avatar)),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.04),
-                        Text(content.name,
+                        Text(content.ct.name,
                             style: const TextStyle(
                                 fontSize: 13,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold)),
-                        Text(content.username,
+                        Text(content.ct.username,
                             style: const TextStyle(
                                 fontSize: 10, color: Colors.white)),
                       ],

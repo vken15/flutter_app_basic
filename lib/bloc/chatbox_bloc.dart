@@ -7,7 +7,6 @@ import 'package:my_first_app/event/load_chat_box_event.dart';
 import 'package:my_first_app/event/submit_text_chatbot_event.dart';
 import 'package:my_first_app/model/messenger.dart';
 import 'package:my_first_app/model/chat_log.dart';
-import 'package:my_first_app/model/user.dart';
 
 class ChatBoxBloc extends BaseBloc {
   final StreamController<ChatLog> _chatLogStreamController =
@@ -16,7 +15,7 @@ class ChatBoxBloc extends BaseBloc {
   Stream<ChatLog> get chatlineDataStream =>
       _chatLogStreamController.stream;
 
-  ChatLog _clog = ChatLog(id: 1, friend: User());
+  late ChatLog _clog;
   TextEditingController inputtext = TextEditingController();
   
   _inputText(String text) {

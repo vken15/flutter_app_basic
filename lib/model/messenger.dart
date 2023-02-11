@@ -26,7 +26,7 @@ class Messenger {
     required int id,
     required int n,
     //required DateTime time,
-    String text = "",
+    required String text,
   })  : _id = id,
         _n = n,
         //_time = time,

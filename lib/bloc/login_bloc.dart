@@ -10,7 +10,7 @@ class LoginBloc {
 
   String _username = "";
   String _password = "";
-  User _user = User();
+  late User _user;
   User get user => _user;
   set setusername(String username) {
     _username = username.trim();
